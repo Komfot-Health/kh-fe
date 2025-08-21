@@ -1,5 +1,3 @@
-import { Icons } from "@/components/icons";
-
 export interface NavItem {
  title: string;
  href?: string;
@@ -24,5 +22,3 @@ export interface FooterItem {
 }
 
 export type MainNavItem = NavItemWithChildren;
-
-export type IconType = keyof typeof Icons;

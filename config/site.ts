@@ -1,4 +1,4 @@
-import type { IconType, MainNavItem } from "@/types";
+import type { MainNavItem } from "@/types";
 
 export const siteConfig = {
   name: "Komfot Health",
