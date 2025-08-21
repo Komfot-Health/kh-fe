@@ -3,227 +3,246 @@ import {
  Card,
  CardContent,
  CardDescription,
+ CardFooter,
  CardHeader,
  CardTitle
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 import { Mail, Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import Image from "next/image";
+import Balancer from "react-wrap-balancer";
+
+const services: { title: string; description: string; img?: string }[] = [
+ {
+  title: "Post Abortion Care",
+  description:
+   "Skip the search for a non-judgmental provider, we connect you to vetted health providers who offer evacuation services for an incomplete or missed abortion.",
+  img: "/post-abortion.svg"
+ },
+ {
+  title: "PID Treatment",
+  description:
+   "If you are dealing with lower abdominal pain and smelly discharge after an unsafe abortion procedure, it could be PID. Speak to our providers from the convenience of your home.",
+  img: "/pid-treatment.svg"
+ },
+ {
+  title: "Contraceptive Services",
+  description:
+   "Stop the guesswork, our health providers will work with you to find the right kind of contraceptive that works for you with minimal side effects.",
+  img: "/contraceptive-services.svg"
+ },
+ {
+  title: "Cervical Cancer Screening",
+  description:
+   "Prevent cervical cancer by checking for pre-cancerous cells by visual inspection with acetic acid. Book a screening session from your phone."
+ },
+ {
+  title: "Mental Health Care",
+  description:
+   "For most people, miscarriage care ends with a hospital visit, but speak to trusted therapists who understand all of your emotions and get the care you deserve."
+ },
+ {
+  title: "HPV Vaccination",
+  description:
+   "Get vaccinated against strains of HPV that cause oral, throat, anal and cervical cancers. Book a session to begin."
+ }
+];
 
 export default function Home() {
+ const navMenus = siteConfig.mainNav;
  return (
   <div className="min-h-screen bg-white">
    {/* Header */}
    <header className="border-b border-gray-200 bg-white">
     <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-     <div className="text-2xl font-bold text-gray-900">Komfot Health</div>
+     <Image src="/icon.svg" width={203} height={38} alt="Komfot" />
      <nav className="hidden md:flex items-center space-x-8">
-      <a href="#" className="text-gray-700 hover:text-gray-900">
-       Home
-      </a>
-      <a href="#" className="text-gray-700 hover:text-gray-900">
-       Services
-      </a>
-      <a href="#" className="text-gray-700 hover:text-gray-900">
-       How it works
-      </a>
-      <a href="#" className="text-gray-700 hover:text-gray-900">
-       About
-      </a>
+      {navMenus.map((menu) => (
+       <a
+        href={menu.href}
+        key={menu.title}
+        className="text-primary-foreground hover:text-gray-900 text-base"
+       >
+        {menu.title}
+       </a>
+      ))}
      </nav>
-     <Button className="bg-[#2ECC71] hover:bg-[#27AE60] text-white">
-      Get Started
-     </Button>
+     <Button size="lg">Get Started</Button>
     </div>
    </header>
 
-   {/* Hero Section */}
-   <section className="bg-white py-20">
+   <section
+    className="py-20 bg-[url(/hero.png)] bg-center h-screen bg-no-repeat"
+    id="hero"
+   >
     <div className="container mx-auto px-4 text-center">
-     <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700 mb-6">
+     <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm text-gray-700 mb-6">
       <span>Trusted by </span>
-      <span className="text-[#2ECC71] font-semibold ml-1">1000+ Women</span>
+      <span className="inline">
+       <span className="text-main font-medium mx-1">1000+</span>
+       Women
+      </span>
      </div>
 
-     <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-      Judgment-Free Post-Abortion & Sexual Health Care
+     <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
+      <p className="md:max-w-4xl mx-auto">
+       <Balancer>Judgment-Free Post-Abortion & Sexual Health Care</Balancer>
+      </p>
      </h1>
 
-     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+     <p className="md:text-lg text-md mb-8 max-w-3xl mx-auto">
       Whether you&apos;re recovering from an abortion or seeking guidance on
       contraception or mental wellness, Komfot Health is here to support you —
       without shame, without delay.
      </p>
 
      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Button className="bg-[#2ECC71] hover:bg-[#27AE60] text-white px-8 py-3 text-lg">
+      <Button size="lg" className="md:w-48 w-full">
        Connect to a provider
       </Button>
-      <Button
-       variant="outline"
-       className="border-gray-300 text-gray-700 px-8 py-3 text-lg"
-      >
+      <Button size="lg" className="md:w-48 w-full" variant="white">
        Learn more
       </Button>
      </div>
     </div>
    </section>
 
-   {/* Services Section */}
-   <section className="bg-[#26A69A] py-20">
+   <section className="bg-main py-20" id="care-that-centers-you">
     <div className="container mx-auto px-4">
      <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-white mb-4">
+      <h2 className="md:text-6xl text-4xl font-bold mb-4">
        Care That Centers You
       </h2>
-      <p className="text-xl text-white/90 max-w-3xl mx-auto">
-       Whether you&apos;re recovering from an abortion or seeking guidance on
-       contraception or mental wellness, Komfot Health is here to support you —
-       without shame, without delay.
+      <p className="md:text-lg text-md max-w-3xl mx-auto">
+       <Balancer>
+        Whether you&apos;re recovering from an abortion or seeking guidance on
+        contraception or mental wellness, Komfot Health is here to support you —
+        without shame, without delay.
+       </Balancer>
       </p>
      </div>
 
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">Post Abortion Care</CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         Skip the search for a non-judgmental provider, we connect you to vetted
-         health providers who offer evacuation services for an incomplete or
-         missed abortion.
-        </CardDescription>
-       </CardContent>
-      </Card>
-
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">PID Treatment</CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         If you are dealing with lower abdominal pain and smelly discharge after
-         an unsafe abortion procedure, it could be PID. Speak to our providers
-         from the convenience of your home.
-        </CardDescription>
-       </CardContent>
-      </Card>
-
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">Contraceptive Services</CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         Stop the guesswork, our health providers will work with you to find the
-         right kind of contraceptive that works for you with minimal side
-         effects.
-        </CardDescription>
-       </CardContent>
-      </Card>
-
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">
-         Cervical Cancer Screening
-        </CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         Prevent cervical cancer by checking for pre-cancerous cells by visual
-         inspection with acetic acid. Book a screening session from your phone.
-        </CardDescription>
-       </CardContent>
-      </Card>
-
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">Mental Health Care</CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         For most people, miscarriage care ends with a hospital visit, but speak
-         to trusted therapists who understand all of your emotions and get the
-         care you deserve.
-        </CardDescription>
-       </CardContent>
-      </Card>
-
-      <Card className="bg-white shadow-lg">
-       <CardHeader>
-        <CardTitle className="text-gray-900">HPV Vaccination</CardTitle>
-       </CardHeader>
-       <CardContent>
-        <CardDescription className="text-gray-600">
-         Get vaccinated against strains of HPV that cause oral, throat, anal and
-         cervical cancers. Book a session to begin.
-        </CardDescription>
-       </CardContent>
-      </Card>
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      {services.map((svc) => (
+       <Card
+        key={svc.title}
+        className={cn("bg-white border-none pt-6", svc.img && "pb-0")}
+       >
+        <CardHeader>
+         <CardTitle className="text-black text-xl text-md">
+          {svc.title}
+         </CardTitle>
+        </CardHeader>
+        <CardContent>
+         <CardDescription className="text-secondary-foreground text-base">
+          {svc.description}
+         </CardDescription>
+        </CardContent>
+        {svc.img && (
+         <CardFooter className="flex justify-between items-center mt-auto px-0">
+          <Image
+           src={svc.img}
+           alt={svc.title}
+           width={100}
+           height={50}
+           className="w-full h-[200px] object-cover"
+          />
+         </CardFooter>
+        )}
+       </Card>
+      ))}
      </div>
     </div>
    </section>
 
-   {/* Values Section */}
    <section className="bg-white py-20">
     <div className="container mx-auto px-4">
      <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Value</h2>
-      <p className="text-xl text-gray-600">
+      <h2 className="md:text-6xl text-4xl font-bold mb-4">Our Value</h2>
+      <p className="md:text-lg text-md">
        Putting the patient at the heart of everything we do ensures they
       </p>
      </div>
 
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div className="text-center">
-       <div className="w-12 h-12 bg-[#26A69A] rounded-full flex items-center justify-center mx-auto mb-4">
-        <span className="text-white font-bold">1</span>
+     {/* Large Mission Section */}
+     <div className="bg-gray-100 rounded-lg p-8 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+       <div className="flex items-start space-x-4">
+        <div className="w-12 h-12 bg-main rounded-full flex items-center justify-center flex-shrink-0">
+         <span className="text-white font-bold text-lg">+</span>
+        </div>
+        <div>
+         <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+         <p className="text-gray-700 text-lg leading-relaxed">
+          Skip the search for a non-judgmental provider, we connect you to
+          vetted health providers who offer evacuation services for an
+          incomplete or missed abortion.
+         </p>
+        </div>
        </div>
-       <h3 className="text-xl font-bold text-gray-900 mb-2">
-        Check if you&apos;re eligible
-       </h3>
-       <p className="text-gray-600">
-        Speak to a provider to know if you qualify for post abortion care.
-       </p>
+       <div className="flex justify-center">
+        <div className="w-80 h-80 bg-gradient-to-br from-purple-200 to-teal-200 rounded-full flex items-center justify-center">
+         {/* Placeholder for the women circle illustration */}
+         <span className="text-gray-500 text-sm">Women Support Circle</span>
+        </div>
+       </div>
       </div>
+     </div>
 
-      <div className="text-center">
-       <div className="w-12 h-12 bg-[#26A69A] rounded-full flex items-center justify-center mx-auto mb-4">
-        <span className="text-white font-bold">2</span>
-       </div>
-       <h3 className="text-xl font-bold text-gray-900 mb-2">Get matched</h3>
-       <p className="text-gray-600">
-        We pair you with a vetted provider who understands your needs
-       </p>
-      </div>
+     {/* Two Smaller Cards */}
+     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <Card className="bg-white shadow-lg border-0">
+       <CardHeader>
+        <div className="flex items-center space-x-3">
+         <div className="w-10 h-10 bg-main rounded-full flex items-center justify-center">
+          <span className="text-white font-bold text-sm">👤</span>
+         </div>
+         <CardTitle className="text-xl font-bold text-gray-900">
+          Patient-centeredness
+         </CardTitle>
+        </div>
+       </CardHeader>
+       <CardContent>
+        <CardDescription className="text-gray-700 text-base">
+         Putting the patient at the heart of everything we do ensures they feel
+         supported, valued, and understood at every step.
+        </CardDescription>
+        <div className="mt-6 flex justify-end">
+         <div className="w-24 h-16 bg-gradient-to-r from-yellow-200 to-green-200 rounded-lg flex items-center justify-center">
+          {/* Placeholder for the women at desk illustration */}
+          <span className="text-gray-500 text-xs">Desk Scene</span>
+         </div>
+        </div>
+       </CardContent>
+      </Card>
 
-      <div className="text-center">
-       <div className="w-12 h-12 bg-[#26A69A] rounded-full flex items-center justify-center mx-auto mb-4">
-        <span className="text-white font-bold">3</span>
-       </div>
-       <h3 className="text-xl font-bold text-gray-900 mb-2">
-        Receive safe care
-       </h3>
-       <p className="text-gray-600">From treatment to emotional healing</p>
-      </div>
-
-      <div className="text-center">
-       <div className="w-12 h-12 bg-[#26A69A] rounded-full flex items-center justify-center mx-auto mb-4">
-        <span className="text-white font-bold">4</span>
-       </div>
-       <h3 className="text-xl font-bold text-gray-900 mb-2">Stay supported</h3>
-       <p className="text-gray-600">
-        We&apos;re here even after your treatment
-       </p>
-      </div>
+      <Card className="bg-white shadow-lg border-0">
+       <CardHeader>
+        <div className="flex items-center space-x-3">
+         <div className="w-10 h-10 bg-main rounded-full flex items-center justify-center">
+          <span className="text-white font-bold text-sm">❤️</span>
+         </div>
+         <CardTitle className="text-xl font-bold text-gray-900">
+          Respect
+         </CardTitle>
+        </div>
+       </CardHeader>
+       <CardContent>
+        <CardDescription className="text-gray-700 text-base">
+         Respect is fundamental to our approach, as we honour each person&apos;s
+         choices, privacy, and dignity, creating a safe and compassionate space
+         for all.
+        </CardDescription>
+       </CardContent>
+      </Card>
      </div>
     </div>
    </section>
 
-   {/* Footer */}
    <footer className="bg-[#1A6B6B] text-white py-20">
     <div className="container mx-auto px-4">
-     {/* Newsletter Section */}
      <div className="text-center mb-20">
       <h2 className="text-5xl font-bold mb-6">
        Get the latest healthcare tips & updates
@@ -246,7 +265,6 @@ export default function Home() {
       </div>
      </div>
 
-     {/* Footer Links */}
      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
        <h3 className="text-xl font-bold mb-4">Komfot Health</h3>
