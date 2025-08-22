@@ -133,18 +133,18 @@ export default function Home() {
    >
     <div className="container max-w-7xl mx-auto px-4 text-center">
      <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm text-gray-700 mb-6">
-      <span>Trusted by </span>
+      <span className="trust">Trusted by </span>
       <span className="inline">
        <span className="text-main font-medium mx-1">1000+</span>
        Women
       </span>
      </div>
 
-     <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
+     <div className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
       <h1 className="md:max-w-4xl mx-auto">
        <Balancer>Judgment-Free Post-Abortion & Sexual Health Care</Balancer>
       </h1>
-     </h1>
+     </div>
 
      <p className="md:text-lg text-md mb-8 max-w-3xl mx-auto">
       Whether you&apos;re recovering from an abortion or seeking guidance on
@@ -422,9 +422,7 @@ export default function Home() {
          <div className="flex items-center gap-4 mb-4">
           <Avatar>
            <AvatarImage src="" />
-           <AvatarFallback>
-            {t.name.charAt(0).toUpperCase()}
-           </AvatarFallback>
+           <AvatarFallback>{t.name.charAt(0).toUpperCase()}</AvatarFallback>
           </Avatar>
           <h4 className="font-semibold text-gray-900">{t.name}</h4>
          </div>

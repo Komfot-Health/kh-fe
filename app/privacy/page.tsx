@@ -14,11 +14,11 @@ export default function Privacy() {
       </span>
      </div>
 
-     <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
+     <div className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
       <h1 className="md:max-w-4xl mx-auto">
        <Balancer>Privacy and Policy</Balancer>
       </h1>
-     </h1>
+     </div>
 
      <p className="md:text-lg text-md mb-8 max-w-3xl mx-auto">
       Whether you&apos;re recovering from an abortion or seeking guidance on
