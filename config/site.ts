@@ -11,16 +11,16 @@ export const siteConfig = {
     href: "#home"
    },
    {
-    title: "Services",
-    href: "#services"
+    title: "What we do",
+    href: "#care-that-centers-you"
    },
    {
     title: "How it works",
-    href: "#how-it-works"
+    href: "#how-we-make-post-abortion-care-accessible"
    },
    {
     title: "About",
-    href: "#about"
+    href: "#our-value"
    },
   ] satisfies MainNavItem[]
  } as const;
