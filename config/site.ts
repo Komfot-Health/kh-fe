@@ -3,7 +3,11 @@ import type { MainNavItem } from "@/types";
 export const siteConfig = {
  name: "Komfot Health",
  description: "Judgment-Free Post-Abortion & Sexual Health Care",
- // url: "https://cybershield.com",
+ url: "https://komfothealth.com",
+ privacyPolicy:{
+  name:'Komfot Health | Privacy Policy',
+  description:''
+ },
 
  mainNav: [
   {
