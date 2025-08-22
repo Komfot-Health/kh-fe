@@ -3,18 +3,19 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Balancer from "react-wrap-balancer";
-import { Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 import { Input } from "./ui/input";
-import { usePathname } from "next/navigation";
+import { siteConfig } from "@/config/site";
 
 export const SiteFooter = () => {
- const pathname = usePathname();
- const isHomePage = pathname === "/";
+ //  const pathname = usePathname();
+ //  const isHomePage = pathname === "/";
+ const socials = siteConfig.socials;
 
  return (
   <footer className="bg-teal-700 text-white py-20">
-   {isHomePage && (
-    <div className="relative">
+   {/* {isHomePage && (
+    <div className="relative h-0">
      <Image
       alt=""
       width={100}
@@ -24,7 +25,7 @@ export const SiteFooter = () => {
       src="/eclipse.svg"
      />
     </div>
-   )}
+   )} */}
    <div className="container max-w-7xl mx-auto px-4 z-[2] relative">
     <div className="text-center mb-20">
      <h2 className="md:text-7xl text-5xl font-medium mb-6">
@@ -104,38 +105,36 @@ export const SiteFooter = () => {
       </div>
       <div className="flex space-x-4 space-y-3">
        <a
-        href="#"
+        href={socials.instagram}
         className="w-10 h-10 bg-[#2A7A7A] rounded-full flex items-center justify-center hover:bg-[#1A6B6B]"
        >
-        <Image src="/icons/instagram.svg" height={40} width={40} alt="" />
+        <Instagram className="size-4" />
        </a>
        <a
-        href="#"
-        className="flex items-center justify-center hover:bg-[#1A6B6B]"
+        href={socials.tiktok}
+        className="flex items-center justify-center hover:bg-[#1A6B6B] bg-[#2A7A7A] w-10 h-10 rounded-full"
        >
-        <Image
-         src="/icons/facebook.svg"
-         height={40}
-         width={40}
-         alt="facebook"
-        />
+        <svg
+         xmlns="http://www.w3.org/2000/svg"
+         width="16"
+         height="16"
+         fill="currentColor"
+         viewBox="0 0 16 16"
+        >
+         <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+        </svg>
        </a>
        <a
-        href="#"
+        href={socials.twitter}
         className="w-10 h-10 bg-[#2A7A7A] rounded-full flex items-center justify-center hover:bg-[#1A6B6B]"
        >
-        <Image src="/icons/twitter.svg" height={40} width={40} alt="twitter" />
+        <Twitter className="size-4" />
        </a>
        <a
-        href="#"
+        href={socials.linkedin}
         className="w-10 h-10 bg-[#2A7A7A] rounded-full flex items-center justify-center hover:bg-[#1A6B6B]"
        >
-        <Image
-         src="/icons/linkedin.svg"
-         height={40}
-         width={40}
-         alt="linkedin"
-        />
+        <Linkedin className="size-4" />
        </a>
       </div>
      </div>
