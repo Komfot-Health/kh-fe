@@ -277,8 +277,8 @@ export default function Home() {
           <div className="">
            <h3 className="text-2xl font-bold mb-4">Patient-centeredness</h3>
            <p className="text-lg leading-relaxed">
-            Putting the patient at the heart of everything we do ensures they
-            feel supported, valued, and understood at every step.
+            We put you at the heart of everything we do to ensure you feel
+            supported, valued, and understood at every step
            </p>
           </div>
          </div>
@@ -325,9 +325,8 @@ export default function Home() {
           <div>
            <h3 className="text-2xl font-bold mb-4">Respect</h3>
            <p className="text-lg leading-relaxed">
-            Skip the search for a non-judgmental provider, we connect you to
-            vetted health providers who offer evacuation services for an
-            incomplete or missed abortion.
+            We honour your choices, privacy, and dignity, because we want a safe
+            and compassionate space for you to receive care.
            </p>
           </div>
          </div>
