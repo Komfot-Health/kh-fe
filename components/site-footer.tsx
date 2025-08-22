@@ -1,33 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Balancer from "react-wrap-balancer";
 import { Mail } from "lucide-react";
 import { Input } from "./ui/input";
+import { usePathname } from "next/navigation";
 
 export const SiteFooter = () => {
+ const pathname = usePathname();
+ const isHomePage = pathname === "/";
+
  return (
   <footer className="bg-teal-700 text-white py-20">
-   <div className="relative">
-    {/* <Image
-     alt=""
-     width={100}
-     height={100}
-     className="w-full absolute top-[-200px] left-[10px] z-[1] hidden lg:block blur-[600]"
-     draggable={false}
-     src="/eclipse.svg"
-    /> */}
-   </div>
+   {isHomePage && (
+    <div className="relative">
+     <Image
+      alt=""
+      width={100}
+      height={100}
+      className="w-full absolute top-[-280px] left-[10px] z-[1] hidden lg:block blur-[600]"
+      draggable={false}
+      src="/eclipse.svg"
+     />
+    </div>
+   )}
    <div className="container max-w-7xl mx-auto px-4 z-[2] relative">
     <div className="text-center mb-20">
      <h2 className="md:text-7xl text-5xl font-medium mb-6">
       <Balancer>Get the latest healthcare tips & updates</Balancer>
      </h2>
      <p className="text-lg mb-12">
-      <Balancer>
-       The scheduling platform that transforms how professionals manage
-       appointments and grow their business
-      </Balancer>
-      .
+      <Balancer>Get informed about post-abortion care.</Balancer>.
      </p>
      <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto h-16">
       <div className="relative flex-1">
@@ -52,12 +56,11 @@ export const SiteFooter = () => {
        alt="Komfot Health"
       />
       <p className="text-sm">
-       The scheduling platform that transforms how professionals manage
-       appointments and grow their business.
+       Judgment-Free Post-Abortion & Sexual Health Care
       </p>
      </div>
 
-     <div className="space-y-4">
+     <div className="space-y-4 text-sm">
       <h4 className="font-semibold space-y-4">Company</h4>
       <ul className="space-y-4">
        <li>
@@ -78,7 +81,7 @@ export const SiteFooter = () => {
       </ul>
      </div>
 
-     <div className="space-y-4">
+     <div className="space-y-4 text-sm">
       <h4 className="font-semibold space-y-4">Legal</h4>
       <ul className="space-y-4">
        <li>
@@ -95,11 +98,11 @@ export const SiteFooter = () => {
      </div>
 
      <div>
-      <div className="mb-4">
+      <div className="mb-4 text-sm space-y-3">
        <p>info@komfothealth.com</p>
-       <p>San Francisco, CA</p>
+       <address className="not-italic">San Francisco, CA</address>
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 space-y-3">
        <a
         href="#"
         className="w-10 h-10 bg-[#2A7A7A] rounded-full flex items-center justify-center hover:bg-[#1A6B6B]"
@@ -138,8 +141,8 @@ export const SiteFooter = () => {
      </div>
     </div>
 
-    <div className="border-t border-[#2A7A7A] mt-16 pt-8">
-     <p className="text-sm">© 2025 Barecal</p>
+    <div className="mt-16 pt-8">
+     <p className="text-sm">&copy; 2025 Komfot Health</p>
     </div>
    </div>
   </footer>
