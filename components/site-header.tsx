@@ -30,7 +30,7 @@ export const SiteHeader = () => {
       <a
        href={menu.href}
        key={menu.title}
-       className="text-primary-foreground hover:text-gray-900 text-base"
+       className="text-primary-foreground hover:text-main/70 text-base"
       >
        {menu.title}
       </a>
