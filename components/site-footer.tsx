@@ -8,14 +8,14 @@ export const SiteFooter = () => {
  return (
   <footer className="bg-teal-700 text-white py-20">
    <div className="relative">
-    <Image
+    {/* <Image
      alt=""
      width={100}
      height={100}
      className="w-full absolute top-[-200px] left-[10px] z-[1] hidden lg:block blur-[600]"
      draggable={false}
      src="/eclipse.svg"
-    />
+    /> */}
    </div>
    <div className="container max-w-7xl mx-auto px-4 z-[2] relative">
     <div className="text-center mb-20">
