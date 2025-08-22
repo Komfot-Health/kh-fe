@@ -86,12 +86,12 @@ export const SiteFooter = () => {
       <h4 className="font-semibold space-y-4">Legal</h4>
       <ul className="space-y-4">
        <li>
-        <a href="#" className="hover:text-white">
+        <a href="/terms-of-service" className="hover:text-white">
          Terms
         </a>
        </li>
        <li>
-        <a href="/privacy" className="hover:text-white">
+        <a href="/privacy-policy" className="hover:text-white">
          Privacy & Cookies
         </a>
        </li>
