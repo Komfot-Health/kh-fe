@@ -8,6 +8,10 @@ export const siteConfig = {
   name:'Komfot Health | Privacy Policy',
   description:''
  },
+ termsOfService:{
+  name:'Komfot Health | Terms of Service',
+  description:''
+ },
 
  mainNav: [
   {
