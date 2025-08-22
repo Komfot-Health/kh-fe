@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
  Card,
@@ -13,6 +15,10 @@ import { cn } from "@/lib/utils";
 import { Mail } from "lucide-react";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const services: { title: string; description: string; img?: string }[] = [
  {
@@ -89,6 +95,37 @@ const providers = [
   label: "Respect Always",
   desc: "Your choices are valid and protected",
   img: "/protected-choices.svg"
+ }
+];
+
+const testimonials = [
+ {
+  name: "Timothy Exodus",
+  text:
+   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+  avatar: "/avatars/timothy.jpg",
+  rating: 5
+ },
+ {
+  name: "Jane Doe",
+  text:
+   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+  avatar: "/avatars/jane.jpg",
+  rating: 5
+ },
+ {
+  name: "Sarah Johnson",
+  text:
+   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+  avatar: "/avatars/sarah.jpg",
+  rating: 5
+ },
+ {
+  name: "Sarah Johnson",
+  text:
+   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+  avatar: "/avatars/sarah.jpg",
+  rating: 5
  }
 ];
 
@@ -391,6 +428,50 @@ export default function Home() {
      <div className="flex justify-center">
       <Button size="lg">Get Started</Button>
      </div>
+    </div>
+   </section>
+
+   <section id="testimonial" className="py-20 bg-white z-[2] relative">
+    <div className="container max-w-6xl mx-auto px-4">
+     <Swiper
+      modules={[Pagination, Autoplay]}
+      pagination={{ clickable: true }}
+      spaceBetween={30}
+      slidesPerView={1}
+      breakpoints={{
+       768: { slidesPerView: 2 },
+       1024: { slidesPerView: 3 }
+      }}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      grabCursor
+     >
+      {testimonials.map((t, i) => (
+       <SwiperSlide key={i}>
+        <div className="p-6 h-full flex flex-col justify-between">
+         <div className="flex items-center gap-4 mb-4">
+          <Image
+           src="/hero.png"
+           alt={t.name}
+           width={5}
+           height={5}
+           className="rounded-full object-cover size-5"
+          />
+          <h4 className="font-semibold text-gray-900">{t.name}</h4>
+         </div>
+         <p className="text-gray-600 text-base leading-relaxed mb-4">
+          {t.text}
+         </p>
+         <div className="flex gap-1">
+          {Array.from({ length: t.rating }).map((_, idx) => (
+           <span key={idx} className="text-yellow-500 text-xl">
+            ★
+           </span>
+          ))}
+         </div>
+        </div>
+       </SwiperSlide>
+      ))}
+     </Swiper>
     </div>
    </section>
 
