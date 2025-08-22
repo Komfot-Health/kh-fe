@@ -21,7 +21,7 @@ export default function Privacy() {
      </h1>
 
      <p className="md:text-lg text-md mb-8 max-w-3xl mx-auto">
-      Whether you're recovering from an abortion or seeking guidance on
+      Whether you&apos;re recovering from an abortion or seeking guidance on
       contraception or mental wellness, Komfot Health is here to support you —
       without shame, without delay.
      </p>
