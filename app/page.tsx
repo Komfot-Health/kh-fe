@@ -1,15 +1,17 @@
 "use client";
 
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
+ Card,
+ CardContent,
+ CardDescription,
+ CardFooter,
+ CardHeader,
+ CardTitle
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { AvatarImage } from "@radix-ui/react-avatar";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import "swiper/css";
@@ -80,47 +82,43 @@ const postAbortionSteps = [
 const providers = [
  {
   label: "Responsive Care",
-  desc: "No delays when time matters",
+  desc:
+   "We know timely care is vital for saving lives. We do this by eliminating barriers to seeking care, which saves time.",
   img: "/responsive-care.svg"
  },
  {
   label: "Patient-Centered",
-  desc: "Your body, your pace",
+  desc:
+   "We put you at the heart of everything we do to ensure you feel supported, valued, and understood at every step.",
   img: "/patient-centric.svg"
  },
  {
-  label: "Respect Always",
-  desc: "Your choices are valid and protected",
+  label: "Respect",
+  desc:
+   "We honour your choices, privacy, and dignity, because we want a safe and compassionate space for you to receive care.",
   img: "/protected-choices.svg"
  }
 ];
 
 const testimonials = [
  {
-  name: "Timothy Exodus",
+  name: "Hirra",
   text:
-   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+   "When I am well rested, I’ll make a thread on how amazing Komfot Health services have been",
   avatar: "/avatars/timothy.jpg",
   rating: 5
  },
  {
-  name: "Jane Doe",
+  name: "Mary",
   text:
-   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+   "Going through my miscarriage was a trying time for me. I am grateful I found Komfot Health on TikTok",
   avatar: "/avatars/jane.jpg",
   rating: 5
  },
  {
-  name: "Sarah Johnson",
+  name: "Aisha",
   text:
-   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
-  avatar: "/avatars/sarah.jpg",
-  rating: 5
- },
- {
-  name: "Sarah Johnson",
-  text:
-   "Reflect, write, and grow. Capture what God is teaching you. Document revelations,",
+   "If I didn’t find Komfot Health, I didn’t know what would have happened. Even with the smell, I couldn’t go to the hospital because I was known in the community. Thank you for the referral to a provider who treated me with care",
   avatar: "/avatars/sarah.jpg",
   rating: 5
  }
@@ -150,11 +148,11 @@ export default function Home() {
 
      <p className="md:text-lg text-md mb-8 max-w-3xl mx-auto">
       Whether you&apos;re recovering from an abortion or seeking guidance on
-      contraception or mental wellness, Komfot Health is here to support you —
-      without shame, without delay.
+      contraception, sexual health and mental wellness, Komfot Health is here to
+      support you — without shame, without delay.
      </p>
 
-     <div className="flex flex-col sm:flex-row gap-4 justify-center">
+     <div className="flex flex-col md:flex-row gap-4 justify-center">
       <Button size="lg" className="md:w-48 w-full">
        Connect to a provider
       </Button>
@@ -216,10 +214,8 @@ export default function Home() {
    <section className="bg-white py-20" id="our-value">
     <div className="container max-w-7xl mx-auto px-4">
      <div className="text-center mb-16">
-      <h2 className="md:text-6xl text-4xl font-bold mb-4">Our Value</h2>
-      <p className="md:text-lg text-md">
-       Putting the patient at the heart of everything we do ensures they
-      </p>
+      <h2 className="md:text-6xl text-4xl font-bold mb-4">Our Values</h2>
+      <p className="md:text-lg text-md">Centering you in everything we do.</p>
      </div>
 
      <div>
@@ -245,9 +241,7 @@ export default function Home() {
          <div>
           <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
           <p className="text-lg leading-relaxed">
-           Skip the search for a non-judgmental provider, we connect you to
-           vetted health providers who offer evacuation services for an
-           incomplete or missed abortion.
+           Make post abortion care easy to access.
           </p>
          </div>
         </div>
@@ -381,7 +375,7 @@ export default function Home() {
       <div className="mb-12">
        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
         {providers.map((provider, i) => (
-         <div key={i} className="bg-gray-100 rounded-3xl">
+         <div key={i} className="bg-gray-100 rounded-3xl md:h-[450px]">
           <div className="flex flex-col p-10">
            <div className="space-y-1">
             <h3 className="text-2xl font-medium">{provider.label}</h3>
@@ -395,7 +389,7 @@ export default function Home() {
            alt="women holding hands"
            width={306}
            height={155}
-           className="w-full object-cover"
+           className="w-full object-cover mt-auto"
           />
          </div>
         ))}
@@ -426,13 +420,12 @@ export default function Home() {
        <SwiperSlide key={i}>
         <div className="p-6 h-full flex flex-col justify-between">
          <div className="flex items-center gap-4 mb-4">
-          <Image
-           src="/hero.png"
-           alt={t.name}
-           width={5}
-           height={5}
-           className="rounded-full object-cover size-5"
-          />
+          <Avatar>
+           <AvatarImage src="" />
+           <AvatarFallback>
+            {t.name.charAt(0).toUpperCase()}
+           </AvatarFallback>
+          </Avatar>
           <h4 className="font-semibold text-gray-900">{t.name}</h4>
          </div>
          <p className="text-gray-600 text-base leading-relaxed mb-4">
