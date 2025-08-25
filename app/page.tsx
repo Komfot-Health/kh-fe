@@ -104,21 +104,21 @@ const testimonials = [
  {
   name: "Hirra",
   text:
-   "When I am well rested, I’ll make a thread on how amazing Komfot Health services have been",
+   "When I am well rested, I’ll make a thread on how amazing Komfot Health services have been.",
   avatar: "/avatars/timothy.jpg",
   rating: 5
  },
  {
   name: "Mary",
   text:
-   "Going through my miscarriage was a trying time for me. I am grateful I found Komfot Health on TikTok",
+   "Going through my miscarriage was a trying time for me. I am grateful I found Komfot Health on TikTok.",
   avatar: "/avatars/jane.jpg",
   rating: 5
  },
  {
   name: "Aisha",
   text:
-   "If I didn’t find Komfot Health, I didn’t know what would have happened. Even with the smell, I couldn’t go to the hospital because I was known in the community. Thank you for the referral to a provider who treated me with care",
+   "If I didn’t find Komfot Health, I didn’t know what would have happened. Even with the smell, I couldn’t go to the hospital because I was known in the community. Thank you for the referral to a provider who treated me with care.",
   avatar: "/avatars/sarah.jpg",
   rating: 5
  }
