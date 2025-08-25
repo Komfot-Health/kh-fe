@@ -29,7 +29,7 @@ const services: { title: string; description: string; img?: string }[] = [
  {
   title: "PID Treatment",
   description:
-   "If you are dealing with lower abdominal pain and smelly discharge after an unsafe abortion procedure, it could be PID. Speak to our providers from the convenience of your home.",
+   "If you are dealing with lower abdominal pain and smelly discharge after an unsafe abortion procedure, it could be PID.",
   img: "/pid-treatment.svg"
  },
  {
