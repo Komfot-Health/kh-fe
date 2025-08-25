@@ -367,7 +367,7 @@ export default function Home() {
      <div className="mb-16">
       <h2 className="md:text-6xl text-4xl font-bold mb-4">We Don’t Judge</h2>
       <p className="md:text-lg text-md">
-       We pair you with a vetted provider who understands your needs
+       We pair you with a vetted provider who understands your needs.
       </p>
      </div>
 
