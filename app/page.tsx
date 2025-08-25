@@ -87,7 +87,7 @@ const providers = [
   img: "/responsive-care.svg"
  },
  {
-  label: "Patient-Centered",
+  label: "Patient-Centeredness",
   desc:
    "We put you at the heart of everything we do to ensure you feel supported, valued, and understood at every step.",
   img: "/patient-centric.svg"
