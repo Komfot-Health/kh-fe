@@ -39,7 +39,7 @@ const services: { title: string; description: string; img?: string }[] = [
   img: "/contraceptive-services.svg"
  },
  {
-  title: "Cervical Cancer Screening",
+  title: "Cervical Cancer Screening & Vaccination",
   description:
    "Prevent cervical cancer by checking for pre-cancerous cells by visual inspection with acetic acid. Book a screening session from your phone."
  },
