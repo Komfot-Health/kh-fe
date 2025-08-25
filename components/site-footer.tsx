@@ -76,7 +76,7 @@ export const SiteFooter = () => {
        </li>
        <li>
         <a href="#" className="hover:text-white">
-         How it work
+         How it works
         </a>
        </li>
       </ul>
