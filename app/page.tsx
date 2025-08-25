@@ -41,7 +41,7 @@ const services: { title: string; description: string; img?: string }[] = [
  {
   title: "Cervical Cancer Screening & Vaccination",
   description:
-   "Prevent cervical cancer by checking for pre-cancerous cells by visual inspection with acetic acid. Book a screening session from your phone."
+   "Prevent cervical cancer by checking for pre-cancerous cells using visual inspection with acetic acid and get vaccinated against strains of HPV that causes oral, throat, anal, cervical, and vaginal cancers"
  },
  {
   title: "Mental Health Care",
@@ -49,9 +49,9 @@ const services: { title: string; description: string; img?: string }[] = [
    "For most people, miscarriage care ends with a hospital visit, but speak to trusted therapists who understand all of your emotions and get the care you deserve."
  },
  {
-  title: "HPV Vaccination",
+  title: "STI Testing and Treatment",
   description:
-   "Get vaccinated against strains of HPV that cause oral, throat, anal and cervical cancers. Book a session to begin."
+   "Dealing with a sexually transmitted infection can feel overwhelming, but try not to let shame or stigma get in the way. It's a health issue, just like any other, and it's much more common than you might think. Focus on getting the right information and the care you need."
  }
 ];
 
