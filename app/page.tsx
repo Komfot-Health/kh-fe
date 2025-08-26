@@ -105,28 +105,35 @@ const testimonials = [
   name: "Hirra",
   text:
    "When I am well rested, I’ll make a thread on how amazing Komfot Health services have been.",
-  avatar: "/avatars/timothy.jpg",
+  avatar: "",
+  rating: 5
+ },
+ {
+  name: "Bisi",
+  text:
+   "What you are doing is lifesaving, and I am thankful I found you",
+  avatar: "",
   rating: 5
  },
  {
   name: "Mary",
   text:
    "Going through my miscarriage was a trying time for me. I am grateful I found Komfot Health on TikTok.",
-  avatar: "/avatars/jane.jpg",
+  avatar: "",
   rating: 5
  },
  {
   name: "Aisha",
   text:
    "If I didn’t find Komfot Health, I didn’t know what would have happened. Even with the smell, I couldn’t go to the hospital because I was known in the community. Thank you for the referral to a provider who treated me with care.",
-  avatar: "/avatars/sarah.jpg",
+  avatar: "",
   rating: 5
  }
 ];
 
 export default function Home() {
  return (
-  <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-white [&_h2]:tracking-[-1.94px]">
    <section
     className="py-20 bg-[url(/hero.png)] w-full bg-center h-[900px] bg-no-repeat"
     id="hero"
@@ -141,7 +148,7 @@ export default function Home() {
      </div>
 
      <div className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight text-center">
-      <h1 className="md:max-w-4xl mx-auto">
+      <h1 className="md:max-w-3xl mx-auto -tracking-[-2%]">
        <Balancer>Judgment-Free Post-Abortion & Sexual Health Care</Balancer>
       </h1>
      </div>
@@ -166,7 +173,7 @@ export default function Home() {
    <section className="bg-main py-20" id="care-that-centers-you">
     <div className="container mx-auto px-4 max-w-7xl">
      <div className="text-center mb-16">
-      <h2 className="md:text-6xl text-4xl font-bold mb-4">
+      <h2 className="md:text-6xl text-4xl font-medium mb-4">
        Care That Centers You
       </h2>
       <p className="md:text-lg text-md">
@@ -214,7 +221,7 @@ export default function Home() {
    <section className="bg-white py-20" id="our-value">
     <div className="container max-w-7xl mx-auto px-4">
      <div className="text-center mb-16">
-      <h2 className="md:text-6xl text-4xl font-bold mb-4">Our Values</h2>
+      <h2 className="md:text-6xl text-4xl font-medium mb-4">Our Values</h2>
       <p className="md:text-lg text-md">Centering you in everything we do.</p>
      </div>
 
@@ -340,8 +347,8 @@ export default function Home() {
 
    <section id="how-we-make-post-abortion-care-accessible" className="py-20">
     <div className="container mx-auto max-w-7xl px-4 space-y-14">
-     <h2 className="md:text-6xl text-4xl font-bold">
-      How We Make Post Abortion Care Accessible To You
+     <h2 className="md:text-6xl text-4xl font-medium">
+      <Balancer>How We Make Post Abortion Care Accessible To You</Balancer>
      </h2>
      <div className="grid md:grid-cols-4 gap-8">
       {postAbortionSteps.map((step, i) => (
@@ -365,7 +372,7 @@ export default function Home() {
    <section className="bg-white py-20 z-[4] relative" id="we-dont-judge">
     <div className="container max-w-7xl mx-auto px-4">
      <div className="mb-16">
-      <h2 className="md:text-6xl text-4xl font-bold mb-4">We Don’t Judge</h2>
+      <h2 className="md:text-6xl text-4xl font-medium mb-4">We Don’t Judge</h2>
       <p className="md:text-lg text-md">
        We pair you with a vetted provider who understands your needs.
       </p>
