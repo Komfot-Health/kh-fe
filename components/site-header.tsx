@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { useStickyHeader } from "@/hook/use-sticky-header";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const SiteHeader = () => {
  const navMenus = siteConfig.mainNav;
@@ -27,13 +28,13 @@ export const SiteHeader = () => {
     />
     <nav className="hidden md:flex items-center space-x-8">
      {navMenus.map((menu) => (
-      <a
+      <Link
        href={menu.href}
        key={menu.title}
        className="text-primary-foreground hover:text-main/70 text-base"
       >
        {menu.title}
-      </a>
+      </Link>
      ))}
     </nav>
     <Button size="lg">Get Started</Button>

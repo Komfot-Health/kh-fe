@@ -6,6 +6,7 @@ import Balancer from "react-wrap-balancer";
 import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 import { Input } from "./ui/input";
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export const SiteFooter = () => {
  //  const pathname = usePathname();
@@ -65,17 +66,17 @@ export const SiteFooter = () => {
       <h4 className="font-semibold space-y-4">Company</h4>
       <ul className="space-y-4">
        <li>
-        <a href="#" className="hover:text-white">
+        <Link href="/" className="hover:text-white">
          Home
-        </a>
+        </Link>
        </li>
        <li>
-        <a href="#" className="hover:text-white">
+        <Link href="#our-value" className="hover:text-white">
          About
-        </a>
+        </Link>
        </li>
        <li>
-        <a href="#" className="hover:text-white">
+        <a href="#how-we-make-post-abortion-care-accessible" className="hover:text-white">
          How it works
         </a>
        </li>
