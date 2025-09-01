@@ -1,5 +1,6 @@
 "use client";
 
+import { ConnectToProviderLink } from "@/components/connect-to-provider-link";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -409,12 +410,9 @@ export default function Home() {
       </div>
      </div>
      <div className="flex justify-center">
-      <Button
-       onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'"
-       size="lg"
-      >
-       Get Started
-      </Button>
+      <ConnectToProviderLink>
+       <Button size="lg">Get Started</Button>
+      </ConnectToProviderLink>
      </div>
     </div>
    </section>

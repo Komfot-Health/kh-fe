@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { useStickyHeader } from "@/hook/use-sticky-header";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { ConnectToProviderLink } from "./connect-to-provider-link";
 
 export const SiteHeader = () => {
  const navMenus = siteConfig.mainNav;
@@ -37,7 +38,9 @@ export const SiteHeader = () => {
       </Link>
      ))}
     </nav>
-    <Button onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'" size="lg">Get Started</Button>
+    <ConnectToProviderLink>
+     <Button size="lg">Get Started</Button>
+    </ConnectToProviderLink>
    </div>
   </header>
  );
