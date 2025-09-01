@@ -37,7 +37,7 @@ export const SiteHeader = () => {
       </Link>
      ))}
     </nav>
-    <Button size="lg">Get Started</Button>
+    <Button onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'" size="lg">Get Started</Button>
    </div>
   </header>
  );
