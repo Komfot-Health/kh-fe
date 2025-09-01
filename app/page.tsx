@@ -110,8 +110,7 @@ const testimonials = [
  },
  {
   name: "Bisi",
-  text:
-   "What you are doing is lifesaving, and I am thankful I found you",
+  text: "What you are doing is lifesaving, and I am thankful I found you",
   avatar: "",
   rating: 5
  },
@@ -160,10 +159,14 @@ export default function Home() {
      </p>
 
      <div className="flex flex-col md:flex-row gap-4 justify-center">
-      <a href="https://api.whatsapp.com/send?phone=2348109938925&text=Hi">
-        <Button size="lg" className="md:w-48 w-full">
-         Connect to a provider
-        </Button>
+      <a
+       href="https://api.whatsapp.com/send?phone=2348109938925&text=Hi"
+       target="_blank"
+       rel="noopener noreferrer"
+      >
+       <Button size="lg" className="md:w-48 w-full">
+        Connect to a provider
+       </Button>
       </a>
       <Button size="lg" className="md:w-48 w-full" variant="white">
        Learn more
@@ -406,7 +409,12 @@ export default function Home() {
       </div>
      </div>
      <div className="flex justify-center">
-      <Button onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'" size="lg">Get Started</Button>
+      <Button
+       onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'"
+       size="lg"
+      >
+       Get Started
+      </Button>
      </div>
     </div>
    </section>
