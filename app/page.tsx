@@ -160,7 +160,7 @@ export default function Home() {
      </p>
 
      <div className="flex flex-col md:flex-row gap-4 justify-center">
-      <Button size="lg" className="md:w-48 w-full">
+      <Button onclick="location.href='https://api.whatsapp.com/send?phone=2348109938925&text=Hi Lade'" size="lg" className="md:w-48 w-full">
        Connect to a provider
       </Button>
       <Button size="lg" className="md:w-48 w-full" variant="white">
